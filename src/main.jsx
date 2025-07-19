@@ -7,7 +7,4 @@ import Todo from './Todo.jsx'
    
 createRoot(document.getElementById('root')).render(
      <Todo/>
-     
-
-
 )
