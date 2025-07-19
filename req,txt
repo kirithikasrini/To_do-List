@@ -1,0 +1,26 @@
+function Form1 ()  {
+    // without using useState hook 
+    
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const formData =  new FormData(event.currentTarget)
+        for (let [key,value] of formData.entries()){
+            console.log(key,value)
+    
+        }
+    };
+  return (
+    <main>
+        <form onSubmit={handleSubmit}>
+            <input name = "firstName" type="text" placeholder="First Name"  />
+            <input  name = "lastName"type="text" placeholder="Last Name"   />
+            <input name = "email" type="email" placeholder="Email"  />
+            <button type="submit">Submit</button>
+        </form>
+
+    </main>
+  )
+}
+
+export default Form1
